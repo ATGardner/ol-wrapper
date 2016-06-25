@@ -10,7 +10,11 @@
     "OpenLayers",
     "OpenLayers-3"
   ],
-  "author": "Noam \"Amtral\" Gal",
+  "author": "Noam \"Amtrak\" Gal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ATGardner/ol-wrapper"
+  },
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.10.4",
