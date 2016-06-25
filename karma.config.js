@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Wed Feb 03 2016 08:45:52 GMT+0200 (Jerusalem Standard Time)
 // require('babel-register')();
-const webpackConfig = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config.dev.js');
 module.exports = function (config) {
     config.set({
         // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -27,7 +27,7 @@ module.exports = function (config) {
             'src/**/*.test.js': ['webpack']
         },
 
-        plugins: ['karma-webpack', 'karma-mocha', 'karma-phantomjs-launcher'],
+        plugins: ['karma-webpack', 'karma-mocha', 'karma-phantomjs-launcher', 'karma-chrome-launcher'],
 
         webpack: webpackConfig,
 

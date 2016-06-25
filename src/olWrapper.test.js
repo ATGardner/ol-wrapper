@@ -4,6 +4,7 @@ import ol from 'openlayers';
 
 describe('Maps', () => {
     it('Creates a simple map object', () => {
+        debugger;
         const actual = createOlObject({});
         expect(actual).toBeA(ol.Map);
     });
