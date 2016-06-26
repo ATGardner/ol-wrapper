@@ -1,6 +1,6 @@
 {
   "name": "ol-wrapper",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Wrap OpenLayers object creation with a simple function and config object",
   "main": "index.js",
   "scripts": {
