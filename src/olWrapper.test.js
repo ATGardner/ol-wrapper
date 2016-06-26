@@ -1,5 +1,5 @@
 import expect from 'expect';
-import createOlObject from './olWrapper';
+import {createOlObject} from './olWrapper';
 import ol from 'openlayers';
 
 describe('Maps', () => {
