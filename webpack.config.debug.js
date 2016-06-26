@@ -13,11 +13,14 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         library: 'olWrapper',
         libraryTarget: 'umd',
-        filename: '[name].dev.js'
+        filename: '[name].debug.js'
     },
     plugins: [
         new webpack.NoErrorsPlugin()
     ],
+    externals: {
+        'openlayers': 'ol'
+    },
     module: {
         loaders: [
             {test: /\.js$/, include: path.join(__dirname, 'src'), loader: 'babel'}
