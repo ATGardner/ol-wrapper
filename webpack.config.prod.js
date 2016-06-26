@@ -5,7 +5,7 @@ module.exports = {
     debug: true,
     noInfo: false,
     entry: {
-        'ol-wrapper': ['./index.js', 'babel-polyfill']
+        'ol-wrapper': ['babel-polyfill', './index.js']
     },
     target: 'web',
     output: {

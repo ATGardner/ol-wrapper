@@ -7,7 +7,7 @@ function isObject(val) {
         && !Array.isArray(val);
 }
 
-export function createOlObject(config) {
+export default function createOlObject(config) {
     const {olClass = 'Map'} = config,
         clazz = _.get(ol, olClass);
     delete config.olClass;
