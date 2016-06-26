@@ -2,7 +2,7 @@
   "name": "ol-wrapper",
   "version": "0.5.1",
   "description": "Wrap OpenLayers object creation with a simple function and config object",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "node_modules/.bin/webpack --config webpack.config.prod.js",
     "test": "node_modules/.bin/karma start karma.config.js"

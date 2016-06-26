@@ -6,7 +6,7 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     noInfo: false,
     entry: {
-        'ol-wrapper': ['./src/index.js', 'babel-polyfill']
+        'ol-wrapper': ['./index.js', 'babel-polyfill']
     },
     target: 'web',
     output: {

@@ -5,7 +5,7 @@ module.exports = {
     debug: true,
     noInfo: false,
     entry: {
-        'ol-wrapper': ['./src/index.js', 'babel-polyfill']
+        'ol-wrapper': ['./index.js', 'babel-polyfill']
     },
     target: 'web',
     output: {
@@ -24,7 +24,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.js$/, include: path.join(__dirname, 'src'), loader: 'babel'}
+            {test: /\.js$/, include: [ path.join(__dirname, 'index.js'), path.join(__dirname, 'src')], loader: 'babel'}
         ]
     }
 };
