@@ -1,3 +1,1 @@
-import createOlObject from './src/olWrapper';
-
-export default createOlObject;
+module.exports = require('./src/olWrapper');
