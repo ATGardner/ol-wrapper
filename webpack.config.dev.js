@@ -13,7 +13,7 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         library: 'olWrapper',
         libraryTarget: 'umd',
-        filename: '[name].bundle.js'
+        filename: '[name].debug.js'
     },
     plugins: [
         new webpack.NoErrorsPlugin()
