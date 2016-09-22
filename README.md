@@ -42,7 +42,7 @@ Currently only with basic functionality, nothing is added over the OpenLayers 3 
 
 either add
 ```html
-<script src="https://npmcdn.com/ol-wrapper/dist/ol-wrapper.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/ol-wrapper/dist/ol-wrapper.min.js" type="text/javascript"></script>
 ```
 or use browserify/webpack with
 ```javascript
