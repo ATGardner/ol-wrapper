@@ -1,30 +1,33 @@
-const webpack = require('webpack'),
-    path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    debug: true,
-    noInfo: false,
-    entry: {
-        'ol-wrapper': ['babel-polyfill', './index.js']
-    },
-    target: 'web',
-    output: {
-        path: path.join(__dirname, 'dist'),
-        library: 'olWrapper',
-        libraryTarget: 'umd',
-        filename: '[name].min.js'
-    },
-    plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin()
-    ],
-    externals: {
-        'openlayers': 'ol'
-    },
-    module: {
-        loaders: [
-            {test: /\.js$/, include: path.join(__dirname, 'src'), loader: 'babel'}
-        ]
-    }
+  entry: {
+    'ol-wrapper': [/*'babel-polyfill', */ './index.js']
+  },
+  output: {
+    path: './dist',
+    filename: '[name].min.js',
+    library: 'olWrapper',
+    libraryTarget: 'umd'
+  },
+  devtool: 'source-map',
+  target: 'web',
+  bail: true,
+  watch: false,
+  externals: {
+    openlayers: 'ol'
+  },
+  plugins: [new webpack.optimize.UglifyJsPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['latest']
+        }
+      }
+    ]
+  }
 };
