@@ -1,8 +1,6 @@
-const webpack = require('webpack');
-
 module.exports = {
   entry: {
-    'ol-wrapper': [/*'babel-polyfill', */ './index.js']
+    'ol-wrapper': ['./index.js']
   },
   output: {
     path: './dist',
@@ -14,7 +12,6 @@ module.exports = {
   target: 'web',
   bail: true,
   watch: false,
-  plugins: [new webpack.NoErrorsPlugin()],
   module: {
     rules: [
       {
