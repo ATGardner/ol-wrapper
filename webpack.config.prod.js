@@ -1,3 +1,5 @@
+const BabiliPlugin = require('babili-webpack-plugin')
+const path = require('path')
 const webpack = require('webpack');
 
 module.exports = {
@@ -5,7 +7,7 @@ module.exports = {
     'ol-wrapper': ['./index.js']
   },
   output: {
-    path: './dist',
+    path: path.join(__dirname, 'dist'),
     filename: '[name].min.js',
     library: 'olWrapper',
     libraryTarget: 'umd'
@@ -15,9 +17,11 @@ module.exports = {
   bail: true,
   watch: false,
   externals: {
-    openlayers: 'ol'
+    ol: 'ol'
   },
-  plugins: [new webpack.optimize.UglifyJsPlugin()],
+  plugins: [
+    new BabiliPlugin()
+  ],
   module: {
     rules: [
       {
@@ -25,7 +29,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['latest']
+          presets: [
+            [
+              'env',
+              {
+                targets: {
+                  browsers: 'last 2 versions',
+                  uglify: true
+                }
+              }
+            ]
+          ]
         }
       }
     ]
