@@ -19,7 +19,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['latest']
+          presets: [
+            [
+              'env',
+              {
+                targets: {
+                  browsers: 'last 2 versions',
+                  uglify: true
+                }
+              }
+            ]
+          ]
         }
       }
     ]
